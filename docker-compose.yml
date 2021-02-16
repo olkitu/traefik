@@ -5,6 +5,11 @@ services:
     ports:
     - 80:80
     - 8080:8080
+    labels:
+      traefik.enable: "true"
+      traefik.http.routers.healthcheck.entrypoints: web
+      traefik.http.routers.healthcheck.rule: Host(`localhost`)
+      traefik.http.routers.healthcheck.service: api@internal
     command:
     - "--api.insecure=true"
     - "--providers.docker=true"
