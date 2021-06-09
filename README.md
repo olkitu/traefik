@@ -12,7 +12,7 @@ Here example `docker-compose` file to deploy to Docker Swarm. You can also modif
 version: "3.8"
 services: 
   traefik:
-    image: olkitu/traefik
+    image: ghcr.io/olkitu/traefik
     deploy:
       update_config:
         order: start-first
