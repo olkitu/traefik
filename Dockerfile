@@ -1,5 +1,5 @@
 # Use traefik image
-FROM traefik:v2.6.1
+FROM traefik:v2.11.9
 
 # Add curl
 RUN apk add --no-cache curl
